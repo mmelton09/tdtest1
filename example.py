@@ -34,6 +34,15 @@ print myvar[ 0 ][ 1 ]
 
 print ''
 
+print "Here's an example of why to append. Lets create a list of the multiples of 3..."
+multiple = 3
+values = []
+for i in range( 0, 10 ):
+	values.append( i * multiple )
+print values
+	
+print ''
+
 print 'For more on lists: http://docs.python.org/2/tutorial/datastructures.html'
 
 
