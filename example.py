@@ -1,4 +1,23 @@
 
+# Printing a table Mike...
+def printTable( aList ):
+	
+	firstEntry = aList[ 0 ];
+
+	headers = []
+	line = ''
+	for key in firstEntry.keys():
+		line += key + '\t'
+		headers.append( key )
+
+	print line
+
+	for entry in aList:
+		line = ''
+		for header in headers:
+			line += entry[ header ] + '\t\t'
+		print line
+	
 # Basic lists
 print 'Basic lists \n'
 print( 'myvar = [ 1, 2, 3 ]' )
@@ -45,4 +64,28 @@ print ''
 
 print 'For more on lists: http://docs.python.org/2/tutorial/datastructures.html'
 
+print ''
 
+print 'Dictionary example'
+
+people = []
+
+people.append( {
+	'name': 'Mike',
+	'dickSize': '6',
+	'funFactor': '10'
+} )
+
+people.append( {
+	'name': 'Andrew',
+	'dickSize': '4',
+	'funFactor': '7'
+} )
+
+people.append( {
+	'name': 'Matt',
+	'dickSize': '15',
+	'funFactor': '2'
+} )
+
+printTable( people )
